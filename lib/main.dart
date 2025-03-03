@@ -1,6 +1,13 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:social_media_app/firebase_options.dart';
 
-void main() {
+void main() async {
+  // firebase setup
+  WidgetsFlutterBinding.ensureInitialized;
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  // firebase setupflutter run
+
   runApp(const MyApp());
 }
 
@@ -9,6 +16,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(),
+    );
   }
 }
