@@ -6,7 +6,7 @@ void main() async {
   // firebase setup
   WidgetsFlutterBinding.ensureInitialized;
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  // firebase setupflutter run
+  // firebase setup
 
   runApp(const MyApp());
 }
